@@ -9,9 +9,8 @@ In this environment, a double-jointed arm can move to target locations. A reward
 
 The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
 
-## Solving the Environment (Udacity Guideline)
+## Solving the Environment 
 
-### Solve the following: (Second Version of udacity objective)
 The barrier for solving the second version of the environment is slightly different, to take into account the presence of many agents. In particular, your agents must get an average score of +30 (over 100 consecutive episodes, and over all agents). Specifically,
 
   - After each episode, we add up the rewards that each agent received (without discounting), to get a score for each agent. This yields 20 (potentially different) scores. We then take the average of these 20 scores.
@@ -25,7 +24,7 @@ As an example, consider the plot below, where we have plotted the average score 
 
 A good understanding of artificial neural network and Q-learning will help you navigate throughout the documentation. In addition, python skillset must be at near intermediate for understanding the structure of the program. 
 
-### Installation (Udacity Guideline)
+### Installation 
 
 Download the environment from one of the links below.  You need only select the environment that matches your operating system:
   - **Twenty (20) Agents**
@@ -42,9 +41,4 @@ Follow the instructions in `Continuous_Control.ipynb` to get started with traini
 
 ## 4. Running the Tests:
 
-## Authors:
-- *Wong, John Maverick* 
 
-See also the list of contributors who participated in this project.
-
-## Acknowledgements:
