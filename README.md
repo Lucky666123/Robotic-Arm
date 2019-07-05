@@ -1,4 +1,4 @@
-# Robotic-Arm
+# Robotic Arm Continuous Control
 
 ## 1. Project Details:
 The project is a part of **Udacity Deep Reinforcement Learning Nanodegree Project**. This is the 2nd Project Main Project, where we trained DQN with discrete state space and discrete action.
