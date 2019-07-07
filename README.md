@@ -37,7 +37,38 @@ Download the environment from one of the links below.  You need only select the 
 
 ## 3. Instructions:
 
-Follow the instructions in `Continuous_Control.ipynb` to get started with training your own agent!  
+Follow the instructions in `Continuous_Control.ipynb` to get started with training your own agent!
+
+*Network Parameters example (model.py):*
+```
+fc1 = nn.Linear(state_size, 512)
+fc2 = nn.Linear(512, 256)
+fc3 = nn.Linear(256, action_size)
+```
+
+*Network Hyperparameters example (model.py):*
+```
+# can be fine-tuned in the notebook itself
+Learning Rate: 0.0005
+Tau: 0.01
+```
+*Agent Parameters / Hyperparameters example (agent.py):*
+```
+# can be fine-tuned in the notebook itself
+Gamma or Discount Rate: 0.95
+Buffer Size: 100,000
+Batch Size: 64
+Update Every: 4
+```
+*Training Parameters example (Navigation.ipynb):*
+```
+Epsilon Value
+	Initial Value: 1.00
+	Final Value: 0.10
+	Decay Rate: 0.995
+Total Number of Episodes: 2000
+Maximum Number of Timesteps per Episodes: 300
+```
 
 ## 4. Running the Tests:
 
