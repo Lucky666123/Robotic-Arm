@@ -9,7 +9,7 @@ In this environment, a double-jointed arm can move to target locations. A reward
 
 The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
 
-## Solving the Environment 
+### Solving the Environment 
 
 The barrier for solving **the second version of the environment** is slightly different, to take into account the presence of many agents. In particular, your agents must get an **average score of +30 (over 100 consecutive episodes, and over all agents).** Specifically,
 
@@ -18,6 +18,10 @@ The barrier for solving **the second version of the environment** is slightly di
 As an example, consider the plot below, where we have plotted the average score (over all 20 agents) obtained with each episode.
 
 The environment is considered solved, when the average (over 100 episodes) of those ***average scores is at least +30.***
+
+### Distributed Training
+
+This version contains 20 identical agents, each with its own copy of the environment. The environment is useful for algorithms like PPO, A3C, and D4PG that use multiple (non-interacting, parallel) copies of the same agent to distribute the task of gathering experience.
 
 ## 2. Getting Started:
 
