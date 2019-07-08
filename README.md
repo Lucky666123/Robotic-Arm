@@ -1,7 +1,7 @@
 # Robotic Arm Continuous Control
 
 ## 1. Project Details:
-The project is a part of **Udacity Deep Reinforcement Learning Nanodegree Project**. This is the 2nd Project Main Project, where we trained DQN with discrete state space and discrete action.
+The project is a part of **Udacity Deep Reinforcement Learning Nanodegree Project**. This is the *2nd Project Main Project,* where we trained the reinforcement learning agent with *policy gradient method*, with continuous action space.
 
 In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
 
@@ -11,12 +11,13 @@ The observation space consists of 33 variables corresponding to position, rotati
 
 ## Solving the Environment 
 
-The barrier for solving the second version of the environment is slightly different, to take into account the presence of many agents. In particular, your agents must get an average score of +30 (over 100 consecutive episodes, and over all agents). Specifically,
+The barrier for solving **the second version of the environment** is slightly different, to take into account the presence of many agents. In particular, your agents must get an **average score of +30 (over 100 consecutive episodes, and over all agents).** Specifically,
 
   - After each episode, we add up the rewards that each agent received (without discounting), to get a score for each agent. This yields 20 (potentially different) scores. We then take the average of these 20 scores.
   - This yields an average score for each episode (where the average is over all 20 agents).
 As an example, consider the plot below, where we have plotted the average score (over all 20 agents) obtained with each episode.
 
+The environment is considered solved, when the average (over 100 episodes) of those ***average scores is at least +30.***
 
 ## 2. Getting Started:
 
