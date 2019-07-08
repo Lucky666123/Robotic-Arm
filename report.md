@@ -1,21 +1,27 @@
 # Project Report
 
-## 1. Deep Q-Network or DQN
+## 1. Deep Deterministic Policy Gradient
 As the state space and action sizes becomes significantly large, Q-Table becomes significantly inaccurate and harder to train. In DQN, neural network is introduced. A value-based reinforcement learning, where a function approximator seeks gradient of the action to know the optimal Q value function. “The parameter θ calculate Q values. Now, we can label **Q value function as Q(s,a;θ)**.”
 
-The network can be composed of the following networks: artificial neural network (ANN), convolutional neural network (CNN) or a recurrent neural network (RNN). In this project, the **network architecture** consists of the dense networks with dueling networks that has the following parameters:
+To mitigate the challenge of unstable learning, a number of techniques are applied like Gradient Clipping, Soft Target Update through twin local / target network and Replay Buffer. The most important one is Replay Buffer where it allows the DDPG agent to learn offline by gathering experiences collected from environment agents and sampling experiences from large Replay Memory Buffer across a set of unrelated experiences. This enables a very effective and quicker training process. Also, Batch Normalization plays an important role to ensure training can happen in mini batch and is GPU hardware optimization friendly.
 
-The **Actor Network:**
+Note:
+ - DDPG is an off-policy algorithm.
+ - DDPG can only be used for environments with continuous action spaces.
+ - DDPG can be thought of as being deep Q-learning for continuous action spaces.
+ - The Spinning Up implementation of DDPG does not support parallelization.
+
+The *Actor Network:*
 ```
-self.fc1 = nn.Linear(state_size, 512)
-self.fc2 = nn.Linear(512, 256)
-self.fc3 = nn.Linear(256, action_size)
+self.fc1 = nn.Linear(state_size, fc1_units)
+self.fc2 = nn.Linear(fc1_units, fc2_units)
+self.fc3 = nn.Linear(fc2_units, action_size)
 ```
-The **Critic Network:**
+The *Critic Network:*
 ```
-self.fc1 = nn.Linear(state_size, 512)
-self.fc2 = nn.Linear(512, 256)
-self.fc3 = nn.Linear(256, action_size)
+self.fcs1 = nn.Linear(state_size, fcs1_units)
+self.fc2 = nn.Linear(fcs1_units+action_size, fc2_units)
+self.fc3 = nn.Linear(fc2_units, 1)
 ```
 
 Knowing the environment, the process and the structure of DQN is extremely significant in building a more complex reinforcement learning agent. While the agent is the main part of the RL, the network is the brains of the agent. Therefore, we can say, the project was structure based on that following analogy. **The process of DQN, within each timestep,** are the following:
@@ -30,14 +36,12 @@ Knowing the environment, the process and the structure of DQN is extremely signi
 ## 2. Summary of Params and Hyperparams of the Agent and of the Network
 *Network Hyperparameters:*
 ```
-# can be fine-tuned in the notebook itself
 tau (interpolation parameter soft update): 0.001
 lr_actor (learning rate actor): 1e-3
 lr_critic (learning rate critic): 1e-4
 ```
 *Agent Parameters / Hyperparameters:*
 ```
-# can be fine-tuned in the notebook itself
 Gamma or Discount Rate: 0.99
 Buffer Size: 1e5
 Batch Size: 100
