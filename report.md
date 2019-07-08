@@ -4,7 +4,6 @@
 
 *Deep Deterministic Policy Gradient or DDPG* is some kind of approximate DQN or an extention of DQN. In DDPG, it employs 2 network model, the actor learns which is the best action, and the critic learns to evaluate the optimal action value function by using the actors best believed action. "The critic in DDPG is used to approximate the maximizer over the Q values of the next state, and not as a learned baseline."
 
-DDPG also employs Actor-Critic model in which the Critic model learns the value function like DQN and uses it to determine how the Actor’s policy based model should change. The Actor brings the advantage of learning in continuous actions space without the need for extra layer of optimization procedures required in a value based function while the Critic supplies the Actor with knowledge of the performance.
 
 In the light of those network, the actor brings the advantage of learning in the action space  and the critic supplies the actor with the knowledge of that learning together with its performance.
 
@@ -58,16 +57,19 @@ Maximum Number of Timesteps per Episodes: 2000
 
 ## 3. Final Results and Takeaways:
 
-
-
 <p align=center><img src="images/graph.png" width="800"/></p>
 
 ## 4. Further Improvements / Further Works
 
-
+Further improvement towards policy gradient includes:
+ - D4PG
+ - MADDPG
+ - TRPO
+ - PPO
+ - ACER
+ - ACTKR
+ - SAC
+ - SAC with Automatically Adjusted Temperature
+ - TD3
 
 ## Acknowledgement
-- https://lilianweng.github.io/lil-log/2018/02/19/a-long-peek-into-reinforcement-learning.html
-
-
-
