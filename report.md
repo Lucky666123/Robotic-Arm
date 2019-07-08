@@ -5,7 +5,7 @@
 *Deep Deterministic Policy Gradient or DDPG* is some kind of approximate DQN or an extention of DQN. In DDPG, it employs 2 network model, the actor learns which is the best action, and the critic learns to evaluate the optimal action value function by using the actors best believed action. "The critic in DDPG is used to approximate the maximizer over the Q values of the next state, and not as a learned baseline."
 
 
-In the light of those network, the actor brings the advantage of learning in the action space  and the critic supplies the actor with the knowledge of that learning together with its performance.
+In the light of those network, *the actor* brings the **advantage of learning in the action space**  and *the critic* **supplies the actor with the knowledge of that learning together with its performance.**
 
 "To mitigate the challenge of unstable learning, a number of techniques are applied like Gradient Clipping, Soft Target Update through twin local / target network and Replay Buffer. The most important one is Replay Buffer where it allows the DDPG agent to learn offline by gathering experiences collected from environment agents and sampling experiences from large Replay Memory Buffer across a set of unrelated experiences. This enables a very effective and quicker training process."
 
