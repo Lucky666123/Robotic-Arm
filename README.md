@@ -54,6 +54,7 @@ In version 2, I re-wrote the program to make it readable. I run a single experim
 
 Run the training through 10,000 episodes although it takes 24 hours with only just 2,000 episodes. Both, the previous training and local training converges at around 30 to 35 average rewards, although with an access to GPU, attaining the maximum score conclusively might have been faster.
 
+<br />
 
 <table>
   <tr>
@@ -74,6 +75,8 @@ Run the training through 10,000 episodes although it takes 24 hours with only ju
   </tr>
 </table>
 
+<br />
+<br />
 
 #### Results:
 <p align=center><img src="images/Avg.Reward.svg" width="1200"/></p>
