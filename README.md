@@ -76,5 +76,5 @@ Run the training through 10,000 episodes although it takes 24 hours with only ju
 
 
 #### Results:
-<p align=center><img src="images/Avg.Reward.svg" width="800"/></p>
+<p align=center><img src="images/Avg.Reward.svg" width="1200"/></p>
 
