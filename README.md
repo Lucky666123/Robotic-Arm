@@ -50,4 +50,7 @@ Follow the instructions in `Continuous_Control.ipynb` to get started with traini
 
 ## 5. Further Testing:
 
+In version 2, I re-wrote the program to make it readable. I run a single experiment based on the learning from the previous runs. Now, we used tensorboardX to plot the rewards and the weights. Both runs converges at around 30 to 35 average rewards, although with an access to GPU, attaining the maximum score conclusively might have been faster.
+
+<p align=center><img src="images/Avg.Reward.svg" width="800"/></p>
 
