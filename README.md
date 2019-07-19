@@ -50,7 +50,31 @@ Follow the instructions in `Continuous_Control.ipynb` to get started with traini
 
 ## 5. Further Testing:
 
-In version 2, I re-wrote the program to make it readable. I run a single experiment based on the learning from the previous runs. Now, we used tensorboardX to plot the rewards and the weights. Both runs converges at around 30 to 35 average rewards, although with an access to GPU, attaining the maximum score conclusively might have been faster.
+In version 2, I re-wrote the program to make it readable. I run a single experiment based on the learning from the previous runs. Now, we used tensorboardX to plot the rewards and the weights. 
 
+Run the training through 10,000 episodes although it takes 24 hours with only just 2,000 episodes. Both, the previous training and local training converges at around 30 to 35 average rewards, although with an access to GPU, attaining the maximum score conclusively might have been faster.
+
+
+<table>
+  <tr>
+    <th class="tg-yw4l" width=600, colspan=2><b>Experiment Details</b></th>
+  </tr>
+  <tr>
+  <tr>
+    <td class="tg-yw4l", width=150><b>Hyperparameters</td>
+    <td class="tg-yw4l"><p align=center>lr_critic= 0.00001 <br />
+                         lr_actor=  0.0005 <br />
+                         tau=0.05 <br />
+                         update_every=1 </p><br /></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>Parameters </b><br /> (Constant)</td>
+    <td class="tg-yw4l"><p align=center>buffer_size=10,000 <br />
+                                        batch_size=256</p></td>
+  </tr>
+</table>
+
+
+#### Results:
 <p align=center><img src="images/Avg.Reward.svg" width="800"/></p>
 
